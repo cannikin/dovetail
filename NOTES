@@ -1,0 +1,28 @@
+- There will be more/less fields depending on type of posting. If it's something for money then show a price field
+- Show specific location? Pull from user account?
+- If we keep our own users table, how do we know when a user has changed their info in AUS?
+  + should posts be anonymous like Craig's list?
+  + only show user info when viewing the detail for a classified?
+  
+  
+
+Data structure
+==============
+
+ads
+---
+title:string
+description:text
+price:decimal
+location:string
+user_id:string
+category_id:integer
+
+categories (acts_as_tree)
+----------
+name
+parent_id
+
+users   # just until we integrate with AUS
+-----
+name
