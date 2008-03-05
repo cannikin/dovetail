@@ -1,3 +1,12 @@
+<div id="breadcrumbs">
+  <%= link_to 'Classifieds', :controller => 'classifieds' %>
+  <% if @breadcrumbs %>
+    <% @breadcrumbs.each do |crumb| %>
+      &gt; <%= link_to_unless_current crumb[:name], crumb[:url] %>
+    <% end %>
+  <% end %>
+</div>
+
 <% if @categories %>
   <ul>
     <% @categories.each do |cat| %>
@@ -21,7 +30,7 @@
 <% if @ads %>
   <a href="#" onclick="history.go(-1); return false;">&laquo; Back</a>
   <% if @ads.empty? %>
-    <p>No ads have been posted in this section.</p>
+    <p>No ads have been posted in this section. <%= link_to 'Add one now', :controller => 'ads', :action => 'new' %></p>
   <% else %>
     <ul>
       <% @ads.each do |ad| %>
@@ -29,7 +38,8 @@
           <%= ad.created_at.to_s(:long) %>
           <%= link_to ad.title, :action => "show", :id => ad %> 
           - posted by <%= ad.user.name %>
-          from <%= ad.location %></li>
+          from <%= ad.location %>
+        </li>
       <% end %>
     </ul>
   <% end %>
