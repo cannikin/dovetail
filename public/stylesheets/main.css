@@ -1,4 +1,32 @@
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	background: #eeeeee url('/images/bg.png') top center repeat-y;
+	}
+
+#main {
+	width: 990px;
+	margin: 0 auto;
+	}
+
+#header {
+	background: transparent url('/images/header_bg.png') top left repeat-x;
+	}
+
+	#header img {
+		margin: 20px 0 0 20px;
+		}
+
+#body {
+	margin: 1em;
+	}
+
+#breadcrumbs {
+	font-size: 80%;
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: 1px dotted #cccccc;
+	font-weight: bold;
 	}

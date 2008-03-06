@@ -14,9 +14,16 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div id="main">
+  <div id="header">
+    <img src="/images/logo.png" alt="Classifieds" />
+  </div>
 
-<%= yield  %>
+  <div id="body">
+    <p style="color: green"><%= flash[:notice] %></p>
+    <%= yield  %>
+  </div>
+</div>
 
 </body>
 </html>
