@@ -1,0 +1,9 @@
+<div id="breadcrumbs">
+  <%= link_to 'Active', 'http://active.com' %> &gt;
+  <%= link_to_unless_current 'Classifieds', '/' %>
+  <% if breadcrumbs %>
+    <% breadcrumbs.each do |crumb| %>
+      &gt; <%= link_to_unless_current crumb[:name], crumb[:url] %>
+    <% end %>
+  <% end %>
+</div>

@@ -1,47 +1,23 @@
-<div id="breadcrumbs">
-  <%= link_to 'Active', 'http://active.com' %> &gt;
-  <%= link_to_unless_current 'Classifieds', '/' %>
-  <% if @breadcrumbs %>
-    <% @breadcrumbs.each do |crumb| %>
-      &gt; <%= link_to_unless_current crumb[:name], crumb[:url] %>
-    <% end %>
-  <% end %>
-</div>
+<%# render :partial => 'breadcrumbs', :locals => { :breadcrumbs => @breadcrumbs } %>
 
-<% if @categories %>
-  <ul>
-    <% @categories.each do |cat| %>
-      <% unless cat.parent %>
-        <li><a href="/classifieds/<%= cat.url %>"><%= cat.name %></a></li>
-      <% end %>
-      <% counter = 0 %>
-      <% if cat.children && cat.children.size > counter %>
-        <ul>
-          <% cat.children.each do |child_cat| %>
-            <li><a href="/classifieds/<%= child_cat.parent.url %>/<%= child_cat.url %>"><%= child_cat.name %></a></li>
-            <% counter += 1 %>
-          <% end %>
-        </ul>
-      <% end %>
-    <% end %>
-  </ul>
-<% end %>
-
+<%= render :partial => 'categories', :locals => { :categories => @categories } %>
 
 <% if @ads %>
-  <a href="#" onclick="history.go(-1); return false;">&laquo; Back</a>
   <% if @ads.empty? %>
     <p>No ads have been posted in this section. <%= link_to 'Add one now', :controller => 'ads', :action => 'new' %></p>
   <% else %>
-    <ul>
-      <% @ads.each do |ad| %>
-        <li>
-          <%= ad.created_at.to_s(:long) %>
-          <%= link_to ad.title, :action => "show", :id => ad %> 
-          - posted by <%= ad.user.name %>
-          from <%= ad.location %>
-        </li>
-      <% end %>
-    </ul>
+    <table id="ads" class="list" cellspacing="0">
+      <thead>
+        <tr>
+          <th>When</th>
+          <th>What</th>
+          <th>Who</th>
+          <th>Where</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render :partial => 'ad', :collection => @ads %>
+      </tbody>
+    </table>
   <% end %>
 <% end %>

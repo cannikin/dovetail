@@ -3,7 +3,12 @@ body {
 	font-size: 100%;
 	margin: 0;
 	padding: 0;
+	color: #333333;
 	background: #eeeeee url('/images/bg.png') top center repeat-y;
+	}
+
+a {
+	color: #336699;
 	}
 
 #main {
@@ -20,8 +25,76 @@ body {
 		}
 
 #body {
-	margin: 1em;
+	margin: 0;
 	}
+
+#categories {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 10px;
+	list-style: none;
+	font-weight: bold;
+	font-size: 90%;
+	width: 190px;
+	line-height: 1.5;
+	}
+
+	#categories > li {
+		margin-top: .5em;
+		}
+
+	#categories ul {
+		margin: 0 0 10px 10px;
+		padding: 0;
+		list-style: none;
+		font-weight: normal;
+		}
+
+	#categories li {
+		padding: 0 0 0 5px;
+		}
+
+		#categories li.active {
+			background-color: #ffffff;
+			}
+
+		#categories li a {
+			display: block;
+			text-decoration: none;
+			}
+		
+		#categories li a:hover {
+			text-decoration: underline;
+			}
+
+table#ads {
+	width: 750px;
+	margin: 0 20px;
+	font-size: 80%;
+	}
+
+	table#ads tr.alt {
+		background-color: #eeeeee;
+		}
+
+	table#ads th {
+		text-align: left;
+		border-bottom: 3px double #cccccc;
+		color: #666666;
+		padding: 0 .5em .5em;
+		}
+
+	table#ads td {
+		padding: .5em;
+		}
+
+		table#ads td.date {
+			color: #999999;
+			}
+
+		table#ads td.title {
+			font-weight: bold;
+			}
 
 #breadcrumbs {
 	font-size: 80%;

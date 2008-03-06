@@ -5,7 +5,7 @@ class Category < ActiveRecord::Base
   
   # only finds the root categories (those with no parent)
   def self.find_all_roots
-    find(:all, :conditions => 'parent_id is null')
+    find(:all, :conditions => 'parent_id is null', :order => 'name')
   end
 
   # find a specific category by the full URL

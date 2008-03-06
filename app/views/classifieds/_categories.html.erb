@@ -1,0 +1,22 @@
+<% if categories %>
+  <ul id="categories">
+    <% categories.each do |cat| %>
+      <% unless cat.parent %>
+        <li class="<%= 'active' if current_path?('active',{ :category => cat.url, :subcategory => nil }) %>">
+          <%= link_to cat.name, :category => cat.url, :subcategory => nil %>
+        </li>
+      <% end %>
+      <% counter = 0 %>
+      <% if cat.children && cat.children.size > counter %>
+        <ul>
+          <% cat.children.each do |child_cat| %>
+            <li class="<%= 'active' if current_path?('active',{ :category => child_cat.parent.url, :subcategory => child_cat.url}) %>">
+              <%= link_to child_cat.name, :category => child_cat.parent.url, :subcategory => child_cat.url %>
+            </li>
+            <% counter += 1 %>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
