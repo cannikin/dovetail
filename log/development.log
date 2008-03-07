@@ -14051,3 +14051,325 @@ Rendered classifieds/_ad (0.00181)
   [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
 Rendered classifieds/_ad (0.00159)
 Completed in 0.06327 (15 reqs/sec) | Rendering: 0.02759 (43%) | DB: 0.00851 (13%) | 200 OK [http://ui/classifieds/baseball]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-06 18:34:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001689)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;35;1mSQL (0.000409)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;36;1mCategory Load (0.000927)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000375)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.000264)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;36;1mSQL (0.000261)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;35;1mSQL (0.000235)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.01289)
+Completed in 0.02727 (36 reqs/sec) | Rendering: 0.01562 (57%) | DB: 0.00416 (15%) | 200 OK [http://localhost/]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-06 18:34:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001527)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000377)[0m   [0mSELECT * FROM categories WHERE (categories."url" = 'baseball') AND (parent_id is null) LIMIT 1[0m
+  [4;36;1mCategory Load (0.001021)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mAd Load (0.001978)[0m   [0mSELECT * FROM ads WHERE (ads."category_id" IN (2,3,1)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000408)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000346)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000331)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00675)
+  [4;35;1mUser Load (0.000347)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.01005)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00098)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00084)
+Completed in 0.05892 (16 reqs/sec) | Rendering: 0.01938 (32%) | DB: 0.00687 (11%) | 200 OK [http://localhost/classifieds/baseball]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-06 18:34:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"for_sale", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001632)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000788)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'for_sale' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000384)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000426)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000339)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000871)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000282)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000229)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00671)
+  [4;35;1mSQL (0.000299)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 2) [0m
+  [4;36;1mAd Load (0.000374)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 2) [0m
+  [4;35;1mUser Load (0.000372)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00772)
+Completed in 0.03676 (27 reqs/sec) | Rendering: 0.01671 (45%) | DB: 0.00622 (16%) | 200 OK [http://localhost/classifieds/baseball/for_sale]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-06 18:34:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"players_wanted", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001507)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000719)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'players_wanted' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000366)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 3) [0m
+  [4;35;1mCategory Load (0.001586)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000409)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000928)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000248)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00737)
+  [4;35;1mSQL (0.000294)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 3) [0m
+  [4;36;1mAd Load (0.000471)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 3) [0m
+  [4;35;1mUser Load (0.000346)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00819)
+Completed in 0.10730 (9 reqs/sec) | Rendering: 0.01814 (16%) | DB: 0.00745 (6%) | 200 OK [http://localhost/classifieds/baseball/players_wanted]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-06 18:34:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001591)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000394)[0m   [0mSELECT * FROM categories WHERE (categories."url" = 'baseball') AND (parent_id is null) LIMIT 1[0m
+  [4;36;1mCategory Load (0.000867)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mAd Load (0.001540)[0m   [0mSELECT * FROM ads WHERE (ads."category_id" IN (2,3,1)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000338)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000395)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000242)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000321)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00662)
+  [4;35;1mUser Load (0.000337)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00748)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00094)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00080)
+Completed in 0.03948 (25 reqs/sec) | Rendering: 0.01634 (41%) | DB: 0.00633 (16%) | 200 OK [http://localhost/classifieds/baseball]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:08:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.002652)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;35;1mSQL (0.000497)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;36;1mCategory Load (0.001089)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000417)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.000277)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;35;1mSQL (0.000327)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.01694)
+Completed in 0.05452 (18 reqs/sec) | Rendering: 0.03762 (69%) | DB: 0.00552 (10%) | 200 OK [http://localhost/]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:08:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001691)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000372)[0m   [0mSELECT * FROM categories WHERE (categories."url" = 'baseball') AND (parent_id is null) LIMIT 1[0m
+  [4;36;1mCategory Load (0.000876)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mAd Load (0.009714)[0m   [0mSELECT * FROM ads WHERE (ads."category_id" IN (2,3,1)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000413)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000426)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000312)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000254)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00758)
+  [4;35;1mUser Load (0.000438)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.01561)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00130)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00102)
+Completed in 0.07291 (13 reqs/sec) | Rendering: 0.02644 (36%) | DB: 0.01486 (20%) | 200 OK [http://localhost/classifieds/baseball]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:08:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"football", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001550)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000405)[0m   [0mSELECT * FROM categories WHERE (categories."url" = 'football') AND (parent_id is null) LIMIT 1[0m
+  [4;36;1mCategory Load (0.000672)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 6) ORDER BY name[0m
+  [4;35;1mAd Load (0.001045)[0m   [0mSELECT * FROM ads WHERE (ads."category_id" IN (6)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000337)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000880)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000312)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000269)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000230)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000377)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00728)
+Completed in 0.02995 (33 reqs/sec) | Rendering: 0.00732 (24%) | DB: 0.00608 (20%) | 200 OK [http://localhost/classifieds/football]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:08:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"outdoor", "action"=>"index", "controller"=>"classifieds"}
+  [4;35;1mCategory Load (0.001644)[0m   [0mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000404)[0m   [0;1mSELECT * FROM categories WHERE (categories."url" = 'outdoor') AND (parent_id is null) LIMIT 1[0m
+  [4;35;1mCategory Load (0.000616)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 7) ORDER BY name[0m
+  [4;36;1mAd Load (0.001054)[0m   [0;1mSELECT * FROM ads WHERE (ads."category_id" IN (7)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;35;1mSQL (0.000362)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;36;1mCategory Load (0.001006)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000352)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mSQL (0.000286)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;35;1mSQL (0.000314)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00807)
+Completed in 0.09818 (10 reqs/sec) | Rendering: 0.00770 (7%) | DB: 0.00631 (6%) | 200 OK [http://localhost/classifieds/outdoor]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:08:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"for_sale", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001478)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000813)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'for_sale' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000352)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000466)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000320)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000900)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000241)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000233)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00682)
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 2) [0m
+  [4;36;1mAd Load (0.000366)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 2) [0m
+  [4;35;1mUser Load (0.000337)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00782)
+Completed in 0.03727 (26 reqs/sec) | Rendering: 0.01673 (44%) | DB: 0.00607 (16%) | 200 OK [http://localhost/classifieds/baseball/for_sale]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:12:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"for_sale", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001642)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000817)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'for_sale' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000455)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000558)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000355)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000901)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000295)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000256)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00704)
+  [4;35;1mSQL (0.000295)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 2) [0m
+  [4;36;1mAd Load (0.000367)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 2) [0m
+  [4;35;1mUser Load (0.000331)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00759)
+Completed in 0.03754 (26 reqs/sec) | Rendering: 0.01678 (44%) | DB: 0.00654 (17%) | 200 OK [http://localhost/classifieds/baseball/for_sale]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:12:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"for_sale", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001754)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000873)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'for_sale' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000417)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000435)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000436)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000916)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000283)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000229)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00859)
+  [4;35;1mSQL (0.000262)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 2) [0m
+  [4;36;1mAd Load (0.000364)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 2) [0m
+  [4;35;1mUser Load (0.000600)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.01083)
+Completed in 0.04760 (21 reqs/sec) | Rendering: 0.02438 (51%) | DB: 0.00681 (14%) | 200 OK [http://localhost/classifieds/baseball/for_sale]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:13:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001532)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000381)[0m   [0mSELECT * FROM categories WHERE (categories."url" = 'baseball') AND (parent_id is null) LIMIT 1[0m
+  [4;36;1mCategory Load (0.000891)[0m   [0;1mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;35;1mAd Load (0.001574)[0m   [0mSELECT * FROM ads WHERE (ads."category_id" IN (2,3,1)) ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000367)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCategory Load (0.000398)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000330)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000242)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00684)
+  [4;35;1mUser Load (0.000333)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00758)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00098)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00084)
+Completed in 0.03998 (25 reqs/sec) | Rendering: 0.01680 (42%) | DB: 0.00632 (15%) | 200 OK [http://localhost/classifieds/baseball]
+
+
+Processing ClassifiedsController#index (for 127.0.0.1 at 2008-03-07 08:13:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--97f4b2a79c71d856c04e67ddbbf927fa1c3da9f0
+  Parameters: {"category"=>"baseball", "subcategory"=>"for_sale", "action"=>"index", "controller"=>"classifieds"}
+  [4;36;1mCategory Load (0.001555)[0m   [0;1mSELECT * FROM categories WHERE (parent_id is null) ORDER BY name[0m
+  [4;35;1mCategory Load (0.000704)[0m   [0mselect child.id from categories child inner join categories parent on child.parent_id = parent.id where child.url = 'for_sale' and parent.url = 'baseball'order by child.created_at asc[0m
+  [4;36;1mCategory Load (0.000347)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 2) [0m
+  [4;35;1mCategory Load (0.000469)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering classifieds/index
+  [4;36;1mSQL (0.000341)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 1) [0m
+  [4;35;1mCategory Load (0.000945)[0m   [0mSELECT * FROM categories WHERE (categories.parent_id = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 6) [0m
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 7) [0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mSELECT count(*) AS count_all FROM categories WHERE (categories.parent_id = 4) [0m
+Rendered classifieds/_categories (0.00722)
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT count(*) AS count_all FROM ads WHERE (ads.category_id = 2) [0m
+  [4;36;1mAd Load (0.000372)[0m   [0;1mSELECT * FROM ads WHERE (ads.category_id = 2) [0m
+  [4;35;1mUser Load (0.000346)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendered classifieds/_ad (0.00840)
+Completed in 0.03827 (26 reqs/sec) | Rendering: 0.01774 (46%) | DB: 0.00619 (16%) | 200 OK [http://localhost/classifieds/baseball/for_sale]
