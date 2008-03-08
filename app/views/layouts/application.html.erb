@@ -14,14 +14,17 @@
 </head>
 <body>
 
-<div id="main">
+<div id="container">
   <div id="header">
     <img src="/images/logo.png" alt="Classifieds" />
   </div>
 
   <div id="body">
     <p style="color: green"><%= flash[:notice] %></p>
-    <%= yield  %>
+    <%= render :partial => 'classifieds/categories', :locals => { :categories => @categories } %>
+    <div id="main">
+      <%= yield  %>
+    </div>
   </div>
 </div>
 

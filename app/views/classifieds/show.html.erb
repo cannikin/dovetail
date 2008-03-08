@@ -1,9 +1,21 @@
-<a href="#" onclick="history.go(-1); return false;">&laquo; Back</a>
-
-<div id="ad_<%= @ad.id %>" class="ad">
-  <h1><%= @ad.title %></h1>
-  <h3>Posted on <%= @ad.created_at.to_s(:long) %> by <%= @ad.user.name %> from <%= @ad.location %></h3>
-  <p><%= @ad.description %></p>
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<% if @ads %>
+  <% if @ads.empty? %>
+    <p>No ads have been posted in this section. <%= link_to 'Add one now', :controller => 'ads', :action => 'new' %></p>
+  <% else %>
+    <table id="ads" class="list" cellspacing="0">
+      <thead>
+        <tr>
+          <th>When</th>
+          <th>What</th>
+          <th>Who</th>
+          <th>Where</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @ads.each do |ad| %>
+          <%= render :partial => 'ads/list', :locals => { :ad => ad } %>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>

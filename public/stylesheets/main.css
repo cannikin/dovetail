@@ -11,7 +11,7 @@ a {
 	color: #336699;
 	}
 
-#main {
+#container {
 	width: 990px;
 	margin: 0 auto;
 	}
@@ -66,10 +66,15 @@ a {
 		#categories li a:hover {
 			text-decoration: underline;
 			}
+			
+#main {
+	float: left;
+	padding: 0 1em;
+}
 
 table#ads {
 	width: 750px;
-	margin: 0 20px;
+	margin: 0;
 	font-size: 80%;
 	}
 

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/classifieds/index.html.erb</string>
+	<string>config/initializers/extend_hash.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -35,10 +35,25 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>config/initializers/extend_hash.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>90</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>app/views/classifieds/index.html.erb</string>
+		<string>config/initializers/extend_hash.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
