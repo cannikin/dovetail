@@ -1,12 +1,8 @@
 class ClassifiedsController < ApplicationController
 
   before_filter :get_categories
-
-  def index
-
-  end
   
-  def show
+  def index
     if params[:subcategory]
       @category = Category.find_by_full_url(params)
       @ads = @category.ads
