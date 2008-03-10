@@ -1,3 +1,5 @@
+require 'active_record/fixtures'
+
 class CreateAds < ActiveRecord::Migration
   def self.up
     create_table :ads do |t|
@@ -10,6 +12,10 @@ class CreateAds < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    directory = File.join(File.dirname(__FILE__), 'default_data')
+    Fixtures.create_fixtures(directory, 'ads')
+
   end
 
   def self.down

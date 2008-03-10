@@ -17,10 +17,13 @@
 <div id="main">
   <div id="header">
     <img src="/images/logo.png" alt="Classifieds" />
+    <%= render :partial => 'classifieds/search' %>
   </div>
 
   <div id="body">
-    <p style="color: green"><%= flash[:notice] %></p>
+    <% if flash %>
+      <div id="flash"><%= flash[:notice] %></div>
+    <% end %>
     <%= yield  %>
   </div>
 </div>

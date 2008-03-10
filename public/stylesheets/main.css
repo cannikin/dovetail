@@ -14,19 +14,56 @@ a {
 #main {
 	width: 990px;
 	margin: 0 auto;
+	overflow: auto;
 	}
 
 #header {
 	background: transparent url('/images/header_bg.png') top left repeat-x;
+	overflow: auto;
+	margin: 0 0 1em;
 	}
 
 	#header img {
+		display: block;
+		float: left;
 		margin: 20px 0 0 20px;
 		}
 
 #body {
 	margin: 0;
+	overflow: auto;
 	}
+
+#search {
+	margin: 16px 0 0 100px;
+	padding: 0;
+	font-size: 70%;
+	color: #666666;
+	overflow: auto;
+	}
+
+	#search .column {
+		text-align: left;
+		float: left;
+		margin: 0 1em 0 0;
+		}
+
+	#search input[type='submit'] {
+		margin-top: 1em;
+		}
+
+	#search label {
+		font-weight: bold;
+		display: block;
+		}
+
+	#keywords {
+		width: 15em;
+		}
+
+	#location {
+		width: 8em;
+		}
 
 #categories {
 	float: left;
@@ -40,7 +77,7 @@ a {
 	}
 
 	#categories > li {
-		margin-top: .5em;
+		
 		}
 
 	#categories ul {
@@ -90,6 +127,7 @@ table#ads {
 
 		table#ads td.date {
 			color: #999999;
+			font-size: 90%;
 			}
 
 		table#ads td.title {

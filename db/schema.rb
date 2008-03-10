@@ -9,29 +9,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "ads", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.decimal  "price"
-    t.string   "location"
-    t.integer  "user_id"
-    t.integer  "category_id"
+    t.string   "title",       :default => "NULL"
+    t.text     "description", :default => "NULL"
+    t.decimal  "price",       :default => 0.0
+    t.string   "location",    :default => "NULL"
+    t.integer  "user_id",     :default => 0
+    t.integer  "category_id", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.integer  "parent_id"
+    t.string   "name",       :default => "NULL"
+    t.string   "url",        :default => "NULL"
+    t.integer  "parent_id",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "filename",   :default => "NULL"
+    t.integer  "ad_id",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :default => "NULL"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

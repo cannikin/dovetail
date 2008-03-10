@@ -1,0 +1,175 @@
+baseball:
+  id: 1
+  name: Baseball
+  url: baseball
+
+baseball_for_sale:
+  id: 2
+  name: For Sale
+  parent_id: 1
+  url: for_sale
+
+baseball_players_wanted:
+  id: 3
+  name: Players Wanted
+  parent_id: 1
+  url: players_wanted
+
+baseball_looking_for_team:
+  id: 4
+  name: Looking for Team
+  parent_id: 1
+  url: looking_for_team
+
+basketball:
+  id: 5
+  name: Basketball
+  url: basketball
+
+basketball_for_sale:
+  id: 6
+  name: For Sale
+  parent_id: 5
+  url: for_sale
+
+basketball_players_wanted:
+  id: 7
+  name: Players Wanted
+  parent_id: 5
+  url: players_wanted
+
+basketball_looking_for_team:
+  id: 8
+  name: Looking for Team
+  parent_id: 5
+  url: looking_for_team
+
+cycling:
+  id: 9
+  name: Cycling
+  url: cycling
+
+cycling_for_sale:
+  id: 10
+  name: For Sale
+  parent_id: 9
+  url: for_sale
+
+cycling_riding_buddies:
+  id: 11
+  name: Riding Buddies
+  parent_id: 9
+  url: riding_buddies
+
+football:
+  id: 12
+  name: Football
+  url: football
+
+football_for_sale:
+  id: 13
+  name: For Sale
+  parent_id: 12
+  url: for_sale
+
+golf:
+  id: 14
+  name: Golf
+  url: golf
+
+golf_for_sale:
+  id: 15
+  name: For Sale
+  parent_id: 14
+  url: for_sale
+
+golf_lessons:
+  id: 16
+  name: Lessons
+  parent_id: 14
+  url: lessons
+
+outdoors:
+  id: 17
+  name: Outdoors
+  url: outdoors
+
+outdoors_for_sale:
+  id: 18
+  name: For Sale
+  parent_id: 17
+  url: for_sale
+
+running:
+  id: 19
+  name: Running
+  url: running
+
+running_for_sale:
+  id: 20
+  name: For Sale
+  parent_id: 19
+  url: for_sale
+
+running_buddies:
+  id: 21
+  name: Running Buddies
+  parent_id: 19
+  url: running_buddies
+
+soccer:
+  id: 22
+  name: Soccer
+  url: soccer
+
+soccer_for_sale:
+  id: 23
+  name: For Sale
+  parent_id: 22
+  url: for_sale
+
+softball:
+  id: 24
+  name: Softball
+  url: softball
+
+softball_for_sale:
+  id: 25
+  name: For Sale
+  parent_id: 24
+  url: for_sale
+
+softball_players_wanted:
+  id: 26
+  name: Players Wanted
+  parent_id: 24
+  url: players_wanted
+
+softball_team_needed:
+  id: 37
+  name: Looking for Team
+  parent_id: 24
+  url: looking_for_team
+
+tennis:
+  id: 28
+  name: Tennis
+  url: tennis
+
+tennis_for_sale:
+  id: 29
+  name: For Sale
+  parent_id: 28
+  url: for_sale
+
+tennis_lessons:
+  id: 30
+  name: Lessons
+  parent_id: 28
+  url: lessons
+
+tennis_doubles_partners:
+  id: 31
+  name: Doubles Partners
+  parent_id: 28
+  url: doubles_partners
