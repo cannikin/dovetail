@@ -11,6 +11,16 @@ a {
 	color: #336699;
 	}
 
+	a:hover {
+		background-color: #DFEFFF;
+		text-decoration: none;
+		}
+
+img {
+	border: 0;
+	vertical-align: middle;
+	}
+
 #container {
 	width: 990px;
 	margin: 0 auto;
@@ -32,6 +42,7 @@ a {
 #body {
 	margin: 0;
 	overflow: auto;
+	font-size: 90%;
 	}
 
 #search {
@@ -71,7 +82,6 @@ a {
 	padding: 0 0 0 10px;
 	list-style: none;
 	font-weight: bold;
-	font-size: 90%;
 	width: 190px;
 	line-height: 1.5;
 	}
@@ -101,18 +111,30 @@ a {
 			}
 		
 		#categories li a:hover {
+			background-color: transparent;
 			text-decoration: underline;
 			}
 			
 #main {
 	float: left;
 	padding: 0 1em;
+	width: 750px;
 }
+
+#add {
+	text-align: right;
+	margin: 0 0 1em;
+	font-weight: bold;
+	}
+
+	#add a:hover {
+		background-color: transparent;
+		}
 
 table#ads {
 	width: 750px;
 	margin: 0;
-	font-size: 80%;
+	font-size: 90%;
 	}
 
 	table#ads tr.alt {
@@ -139,10 +161,46 @@ table#ads {
 			font-weight: bold;
 			}
 
-#breadcrumbs {
-	font-size: 80%;
-	margin: 0 0 1em;
-	padding: 0 0 1em;
-	border-bottom: 1px dotted #cccccc;
+.ad {
+	width: 750px;
+	}
+
+	.ad div#title {
+		float: left;
+		}
+
+	.ad h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 150%;
+		}
+
+	.ad h2 {
+		font-size: 100%;
+		margin: 0 0 1em;
+		padding: 0;
+		color: #999999;
+		font-weight: normal;
+		}
+
+	.ad h3 {
+		margin: 0 0 .4em;
+		padding: 0;
+		color: #666666;
+		font-weight: normal;
+		font-size: 100%;
+		}
+
+	.ad div#location_and_price {
+		float: right;
+		}
+
+	.ad .description {
+		clear: both;
+		}
+
+#contact {
+	text-align: center;
+	margin: 1em 0;
 	font-weight: bold;
 	}

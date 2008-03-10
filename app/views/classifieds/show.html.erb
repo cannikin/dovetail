@@ -1,3 +1,8 @@
+<div id="add">
+  <%= link_to(image_tag('/images/icons/add.png'), new_ad_url(:action => 'new')) %>
+  <%= link_to('Post an ad', new_ad_url(:action => 'new')) %>
+</div>
+
 <% if @ads %>
   <% if @ads.empty? %>
     <p>No ads have been posted in this section. <%= link_to 'Add one now', :controller => 'ads', :action => 'new' %></p>

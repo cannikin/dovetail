@@ -1,10 +1,25 @@
 <div id="ad_<%= @ad.id %>" class="ad">
-  <h1><%=h @ad.title %></h1>
-  <%=h @ad.description %>
-  <b>Price:</b> <%=h @ad.price %>
-  <b>Location:</b> <%=h @ad.location %>
-  <b>User:</b> <%=h @ad.user.name %>
+  <div id="title">
+    <h1><%=h @ad.title %></h1>
+    <h2><%= distance_of_time_in_words @ad.created_at %> by <%= link_to @ad.user.name, :controller => 'users', :action => 'show', :id => @ad.user %></h2>
+  </div>
+  <div id="location_and_price">
+    <h3><strong>Location:</strong> <%= link_to @ad.location, '#' %></h3>
+    <% unless @ad.price.nil? || @ad.price == 0 %>
+      <h3><strong>Price:</strong> <%= number_to_currency @ad.price %></h3>
+    <% end %>
+  </div>
+  <p class="description"><%=h @ad.description %></p>
 </div>
 
-<%= link_to 'Edit', edit_ad_path(@ad) %> |
-<%= link_to 'Back', ads_path %>
+<div id="contact">
+  <%= link_to(image_tag('/images/icons/email.png'), '#') %>
+  <%= link_to "Send #{@ad.user.name} a message about this posting", '#' %>
+</div>
+
+<!--
+<p>
+  <%= link_to 'Edit', edit_ad_path(@ad) %> |
+  <%= link_to 'Back', ads_path %>
+</p>
+-->

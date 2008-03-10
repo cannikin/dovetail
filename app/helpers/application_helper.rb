@@ -1,14 +1,27 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
-  def class_if_current(class_name='active',values={})
-    current = values.keys.all? do |key|
-      (params[key] && params[key] == values[key]) || (values[key] == nil && !params.has_key?(key))
+  # checks to see if two hashes passed in contain the same values
+  # used to determine if a link points to the same place as the URL
+  # similar to link_to_unless_current() but will output a class="" string
+  # for setting an <li> as the current list item
+
+  def class_if_current(class_name='active', values={}, other={})
+
+    # go through the hash and see if this is in any way related to the current path
+    current = other.keys.all? do |key|
+      (values[key] && values[key] == other[key]) || (other[key] == nil && !other.has_key?(key))
     end
+
+    # if it is, return the class name
     if current
       'class="' + class_name.to_s + '"'
     end
   end
+
+
+  # borrowed from Beast (http://beast.caboo.se). takes a length of time
+  # and turns it into an english phrase
 
   def distance_of_time_in_words(from_time, to_time = Time.now, include_seconds = false)
     from_time = from_time.to_time if from_time.respond_to?(:to_time)
