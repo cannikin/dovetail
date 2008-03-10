@@ -3,6 +3,10 @@ class ClassifiedsController < ApplicationController
   before_filter :get_categories
 
   def index
+
+  end
+  
+  def show
     if params[:subcategory]
       @category = Category.find_by_full_url(params)
       @ads = @category.ads
@@ -16,14 +20,6 @@ class ClassifiedsController < ApplicationController
       category_ids << @category.id
       @ads = Ad.find_all_by_category_id(category_ids, :order => 'created_at desc')
     end
-  end
-  
-  def show
-    @ad = Ad.find(params[:id])
-  end
-
-  def get_categories
-    @categories = Category.find_all_roots
   end
   
 end

@@ -1,33 +1,10 @@
-<p>
-  <b>Title:</b>
-  <%=h @ad.title %>
-</p>
-
-<p>
-  <b>Description:</b>
+<div id="ad_<%= @ad.id %>" class="ad">
+  <h1><%=h @ad.title %></h1>
   <%=h @ad.description %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%=h @ad.price %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%=h @ad.location %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @ad.user_id %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%=h @ad.category_id %>
-</p>
-
+  <b>Price:</b> <%=h @ad.price %>
+  <b>Location:</b> <%=h @ad.location %>
+  <b>User:</b> <%=h @ad.user.name %>
+</div>
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>

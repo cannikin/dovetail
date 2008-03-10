@@ -30,13 +30,13 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
   
-  map.classifieds 'controller', :controller => 'classifieds'
+  map.classifieds 'classifieds/:category/:subcategory', :controller => 'classifieds', :action => 'show', :defaults => { :category => nil, :subcategory => nil }
   
-  map.connect '/classifieds', :controller => 'classifieds', :action => 'index'
-  map.connect '/classifieds/index', :controller => 'classifieds', :action => 'index'
-  map.connect '/classifieds/:id', :requirements => { :id => /\d+/ }, :controller => 'classifieds', :action => 'show'
-  map.connect '/classifieds/:category', :controller => 'classifieds', :action => 'index'
-  map.connect '/classifieds/:category/:subcategory', :controller => 'classifieds', :action => 'index'
+  # map.connect 'classifieds', :controller => 'classifieds', :action => 'index'
+  # map.connect 'classifieds/index', :controller => 'classifieds', :action => 'index'
+  # map.connect 'classifieds/:id', :requirements => { :id => /\d+/ }, :controller => 'classifieds', :action => 'show'
+  # map.connect 'classifieds/:category', :controller => 'classifieds', :action => 'show'
+  # map.connect 'classifieds/:category/:subcategory', :controller => 'classifieds', :action => 'show'
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => 'classifieds'

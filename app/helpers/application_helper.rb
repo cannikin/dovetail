@@ -1,8 +1,13 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
-  def current_path?(class_name='active',values={})
-    params.has_at_least? values
+  def class_if_current(class_name='active',values={})
+    current = values.keys.all? do |key|
+      (params[key] && params[key] == values[key]) || (values[key] == nil && !params.has_key?(key))
+    end
+    if current
+      'class="' + class_name.to_s + '"'
+    end
   end
 
   def distance_of_time_in_words(from_time, to_time = Time.now, include_seconds = false)

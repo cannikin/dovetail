@@ -1,4 +1,7 @@
 class AdsController < ApplicationController
+  
+  before_filter :get_categories
+  
   # GET /ads
   # GET /ads.xml
   def index
