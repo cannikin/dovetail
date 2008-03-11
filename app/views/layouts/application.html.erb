@@ -5,8 +5,8 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>
     Active Classifieds 
-    <%= "&gt; #{params[:category]}" if params[:category] %> 
-    <%= "&gt; #{params[:subcategory]}" if params[:subcategory] %>
+    <%= "&gt; #{params[:category].titleize}" if params[:category] %> 
+    <%= "&gt; #{params[:subcategory].titleize}" if params[:subcategory] %>
     <%= "&gt; #{@ad[:title]}" if @ad %>
   </title>
   <%= stylesheet_link_tag 'main' %>
@@ -16,7 +16,7 @@
 
 <div id="container">
   <div id="header">
-    <img src="/images/logo.png" alt="Classifieds" />
+    <%= link_to(image_tag('/images/logo.png'), classifieds_url) %>
     <%= render :partial => 'classifieds/search' %>
   </div>
 
@@ -25,12 +25,22 @@
       <div id="flash"><%= flash[:notice] %></div>
     <% end %>
 
-    <%= render :partial => 'classifieds/categories', :locals => { :categories => @categories } %>
+    <div id="categories">
+      <%= render :partial => 'classifieds/categories', :locals => { :categories => @categories } %>
+    </div>
+
     <div id="main">
       <%= yield  %>
     </div>
   </div>
+
 </div>
+
+<!-- 
+<div id="footer">
+  This amazing prototype brought to by: <%= image_tag('/images/rails.png') %>
+</div>
+-->
 
 </body>
 </html>

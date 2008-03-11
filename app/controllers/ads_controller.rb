@@ -1,6 +1,6 @@
 class AdsController < ApplicationController
   
-  before_filter :get_categories
+  before_filter :get_categories, :except => 'new'
   
   # GET /ads
   # GET /ads.xml

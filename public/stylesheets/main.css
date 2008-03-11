@@ -78,19 +78,18 @@ img {
 
 #categories {
 	float: left;
-	margin: 0;
-	padding: 0 0 0 10px;
-	list-style: none;
-	font-weight: bold;
-	width: 190px;
-	line-height: 1.5;
+	width: 200px;
 	}
 
-	#categories > li {
-		
+	#categories ul {
+		margin: 0;
+		padding: 0 0 0 10px;
+		list-style: none;
+		font-weight: bold;
+		line-height: 1.5;
 		}
 
-	#categories ul {
+	#categories ul ul {
 		margin: 0 0 10px 10px;
 		padding: 0;
 		list-style: none;
@@ -116,8 +115,8 @@ img {
 			}
 			
 #main {
-	float: left;
 	padding: 0 1em;
+	float: left;
 	width: 750px;
 }
 
@@ -132,7 +131,7 @@ img {
 		}
 
 table#ads {
-	width: 750px;
+	width: 100%;
 	margin: 0;
 	font-size: 90%;
 	}
@@ -196,11 +195,19 @@ table#ads {
 		}
 
 	.ad .description {
-		clear: both;
+		clear: left;
+		line-height: 1.2
 		}
 
 #contact {
 	text-align: center;
 	margin: 1em 0;
 	font-weight: bold;
+	}
+
+#footer {
+	margin: 0 auto;
+	padding: 1em;
+	text-align: right;
+	background-color: #ffffff;
 	}

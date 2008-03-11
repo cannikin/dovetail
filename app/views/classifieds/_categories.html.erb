@@ -1,7 +1,5 @@
-
-
 <% if categories %>
-  <ul id="categories">
+  <ul>
     <% categories.each do |cat| %>
       <% unless cat.parent %>
         <li <%= class_if_current(:active, params, { :category => cat.url, :subcategory => nil }) %>>

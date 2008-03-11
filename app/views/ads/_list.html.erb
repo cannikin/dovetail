@@ -1,6 +1,9 @@
 <tr class="<%= cycle '', 'alt' %>">
   <td class="date"><%= distance_of_time_in_words ad.created_at %></td>
-  <td class="title"><%= link_to ad.title, :controller => 'ads', :action => "show", :id => ad %></td>
+  <td class="title">
+    <%= link_to ad.title, :controller => 'ads', :action => "show", :id => ad %>
+    <%= image_tag('/images/icons/photo.png', :alt => 'pic') if ad.has_images? %>
+  </td>
   <td class="user"><%= link_to ad.user.name, :controller => 'users', :action => 'show', :id => ad.user.id %></td>
   <td class="location"><%= link_to ad.location, :controller => 'users', :action => 'show', :id => ad.user.id %></td>
 </tr>

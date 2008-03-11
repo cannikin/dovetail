@@ -10,7 +10,7 @@ module ApplicationHelper
 
     # go through the hash and see if this is in any way related to the current path
     current = other.keys.all? do |key|
-      (values[key] && values[key] == other[key]) || (other[key] == nil && !other.has_key?(key))
+      (values[key] && values[key] == other[key]) || (other[key] == nil && !values.has_key?(key))
     end
 
     # if it is, return the class name

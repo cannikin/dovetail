@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
   
-  map.classifieds 'classifieds/:category/:subcategory', :controller => 'classifieds', :action => 'show', :defaults => { :category => nil, :subcategory => nil }
+  map.classifieds 'classifieds/:category/:subcategory', :controller => 'classifieds', :action => 'index', :defaults => { :category => nil, :subcategory => nil }
   
   # map.connect 'classifieds', :controller => 'classifieds', :action => 'index'
   # map.connect 'classifieds/index', :controller => 'classifieds', :action => 'index'

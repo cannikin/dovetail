@@ -10,6 +10,10 @@
     <% end %>
   </div>
   <p class="description"><%=h @ad.description %></p>
+
+  <% @ad.images.each do |image| %>
+    <%= image_tag image.filename %>
+  <% end %>
 </div>
 
 <div id="contact">
