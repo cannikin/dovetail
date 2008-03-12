@@ -16,6 +16,14 @@ a {
 		text-decoration: none;
 		}
 
+h1 {
+	color: #336699;
+	font-size: 130%;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	}
+
 img {
 	border: 0;
 	vertical-align: middle;
@@ -41,7 +49,7 @@ img {
 
 #body {
 	margin: 0;
-	overflow: auto;
+	overflow: hidden;
 	font-size: 90%;
 	}
 
@@ -113,12 +121,67 @@ img {
 			background-color: transparent;
 			text-decoration: underline;
 			}
-			
+
+#help {
+	float: left;
+	width: 180px;
+	padding: 0 10px;
+	font-size: 90%;
+	color: #666666;
+	}
+
+	#help h3 {
+		margin: 0 0 .5em;
+		padding: 0;
+		}
+
+	#help ul {
+		margin: 0 0 0 1em;
+		padding: 0;
+		list-style: square;
+		}
+
+		#help li {
+			margin: .5em 0;
+			}
+
+#new_ad {
+	}
+
+	#new_ad label {
+		font-weight: bold;
+		display: block;
+		margin: 1em 0 0;
+		}
+
+		#new_ad label span {
+			font-weight: normal;
+			font-size: 85%;
+			color: #999999;
+			}
+
+	#new_ad input {
+		font-size: 120%;
+		}
+	
+	#new_ad textarea {
+		width: 600px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 120%;
+		}
+
+#save_bar {
+	border-top: 3px double #cccccc;
+	padding: 1em;
+	margin: 1em 0;
+	text-align: center;
+	}
+
 #main {
 	padding: 0 1em;
 	float: left;
 	width: 750px;
-}
+	}
 
 #add {
 	text-align: right;
@@ -158,6 +221,13 @@ table#ads {
 
 		table#ads td.title {
 			font-weight: bold;
+			}
+
+		table#ads td.title span.posted_in {
+			font-weight: normal;
+			color: #999999;
+			font-size: 85%;
+			display: block;
 			}
 
 .ad {

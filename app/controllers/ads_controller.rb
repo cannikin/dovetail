@@ -28,6 +28,8 @@ class AdsController < ApplicationController
   # GET /ads/new.xml
   def new
     @ad = Ad.new
+    @help = "<h3>The Rules</h3><ul><li>Keep your post polite - no profanity or evil.</li><li>Don't post across multiple categories.</li><li>Don't sell something you stole (or we'll tell).</li></ul><p>Here is some basic formatting you can use in your description:</p>"
+
 
     respond_to do |format|
       format.html # new.html.erb

@@ -12,7 +12,7 @@
   <%= stylesheet_link_tag 'main' %>
   <%= javascript_include_tag :defaults %>
 </head>
-<body>
+<body id="<%= params[:controller] %>">
 
 <div id="container">
   <div id="header">
@@ -25,9 +25,15 @@
       <div id="flash"><%= flash[:notice] %></div>
     <% end %>
 
-    <div id="categories">
-      <%= render :partial => 'classifieds/categories', :locals => { :categories => @categories } %>
-    </div>
+    <% if @categories %>
+      <div id="categories">
+        <%= render :partial => 'classifieds/categories', :locals => { :categories => @categories } %>
+      </div>
+    <% elsif @help %>
+      <div id="help">
+        <%= render :partial => 'ads/help' %>
+      </div>
+    <% end %>
 
     <div id="main">
       <%= yield  %>

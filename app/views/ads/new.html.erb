@@ -1,41 +1,28 @@
-<h1>Post a new ad</h1>
+<div id="new_ad">
+  <h1>Post a new ad</h1>
+  <%= error_messages_for :ad %>
+  <% form_for(@ad) do |form| %>
 
-<%= error_messages_for :ad %>
+    <label for="ad_category_id">Category</label>
+    <%= form.text_field :category_id %>
+    
+    <label for="ad_title">Title</label>
+    <%= form.text_field :title %>
 
-<% form_for(@ad) do |f| %>
-  <p>
-    <b>Title</b><br />
-    <%= f.text_field :title %>
-  </p>
+    <label for="ad_description">Description</label>
+    <%= form.text_area :description %>
 
-  <p>
-    <b>Description</b><br />
-    <%= f.text_area :description %>
-  </p>
+    <label for="ad_price">Price <span>(if you're selling something)</span></label>
+    <%= form.text_field :price %>
 
-  <p>
-    <b>Price</b><br />
-    <%= f.text_field :price %>
-  </p>
+    <label for="ad_location">Location</label>
+    <%= form.text_field :location %>
 
-  <p>
-    <b>Location</b><br />
-    <%= f.text_field :location %>
-  </p>
+    <div id="save_bar">
+      <%= form.submit "Create" %> or <%= link_to 'Cancel', classifieds_path %>
+    </div>
 
-  <p>
-    <b>User</b><br />
-    <%= f.text_field :user_id %>
-  </p>
+  <% end %>
 
-  <p>
-    <b>Category</b><br />
-    <%= f.text_field :category_id %>
-  </p>
-
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', ads_path %>
+  <%= link_to 'Back', ads_path %>
+</div>
