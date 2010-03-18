@@ -1,0 +1,6 @@
+-# The main body of the page
+- content_for :main do
+  - @page.parts.each do |part|
+    %div{ :id => "part_#{part.id}", :class => "part #{part.part_type.class_name}" }
+      =render :partial => "parts/view_#{part.part_type.class_name}", :locals => { :part => part }
+      

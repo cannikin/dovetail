@@ -1,0 +1,28 @@
+1:
+  id: 1
+  name: Text and HTML
+  class_name: html
+  description: In this part you can have regular text and HTML. (See the 'help' section for info about HTML.)
+  code: |
+    [Type your text here]
+  position: 1
+  default: true
+  
+2:
+  id: 2
+  name: External Photo Gallery
+  class_name: photos
+  description: You can use this part to place a photo gallery from a site like Flickr, PhotoBucket or Shutterfly.
+  code: |
+    [Something like http://flickr.com/photos/johndoe/slideshow/2343534523]
+  position: 2
+
+3:
+  id: 3
+  name: External Video Player
+  class_name: video
+  description: This part will allow you to embed a video from sites like YouTube, blip.tv or Vimeo.
+  code: |
+    [Something like http://youtube.com/watch?v=1235354]
+  position: 3
+  

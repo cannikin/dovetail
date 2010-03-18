@@ -1,0 +1,89 @@
+// global resets
+html, body
+  :font-family 'Lucida Grande',Tahoma,sans-serif
+a
+  &:hover
+    :text-decoration none
+    
+// main container
+#container
+  :width 700px
+  :padding 0 50px
+  :margin 0 auto
+  :overflow hidden
+
+// header
+#header
+  :padding 2em 0
+  :margin 0 0 2em 0
+  h1
+    :font-size 197%
+    a
+      :text-decoration none
+    
+#main
+  :overflow hidden
+  
+  // navigation
+  #nav
+    :float left
+    :width 11em
+    :margin 0
+    :text-align left
+    :overflow hidden
+    ul
+      li
+        :margin 0 0 1em
+        &.current
+          :font-weight bold
+          a
+            :text-decoration none
+
+  // body content
+  #content
+    :margin-left 13em
+  .part.html
+    h2
+      :font-size 131%
+      :font-weight bold
+    p, ul, ol, dl, th, td
+      :font-size 95%
+      :line-height 1.5
+    img
+      padding: 2px
+      border: 1px solid #cccccc
+    th
+      font-weight: bold
+      border-bottom: 3px double #cccccc
+    td
+      border-bottom: 1px solid #cccccc
+    tr:last-child td
+      border-bottom: none
+  .part + .part
+    border-top: 2px solid #cccccc
+    padding-top: 1em
+
+// editing page part
+.edit_part_form
+  .textarea
+    background-color: #eeeeee
+    border: 1px solid #aaaaaa
+    textarea
+      border: 1px solid #aaaaaa
+      
+// textile editor
+div.textile-toolbar 
+  margin: 0 !important
+  button
+    img
+      border: none !important
+      padding: 0 !important
+
+
+
+// footer
+#footer
+  :text-align center
+  :border-top 1px solid #cccccc
+  :padding 1em 0
+  :margin 2em 0 0

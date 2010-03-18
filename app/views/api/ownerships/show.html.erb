@@ -1,0 +1,13 @@
+<p>
+  <b>Site:</b>
+  <%=h @ownership.site_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @ownership.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ownership_path(@ownership) %> |
+<%= link_to 'Back', ownerships_path %>
