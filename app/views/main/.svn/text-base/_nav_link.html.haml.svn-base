@@ -1,1 +1,0 @@
-%li{:class => (page == @page ? 'current' : '')}= link_to page.name, :controller => (logged_in? ? 'admin' : 'main'), :page => page.slug

@@ -1,5 +1,0 @@
-= link_to_function('+ Add a Page', "$(this).hide(); $('new_page_form').show()", :class => 'admin new', :id => 'add_page_link')
-- form_remote_tag(:url => ajax_path(:action => 'add_page'), :success => "location.href = request.responseText", :html => { :id => 'new_page_form', :style => 'display:none' }) do
-  = text_field_tag :new_page_name, 'Page name', :class => 'default', :onfocus => "$(this).value = ''; $(this).removeClassName('default');"
-  = render :partial => 'save_bar', :locals => { :button_label => 'Add Page', :cancel_action => "$('new_page_form').hide(); $('add_page_link').show()" }
-  

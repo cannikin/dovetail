@@ -1,76 +1,0 @@
-10
-
-dir
-50
-svn://mercury.ridingtheclutch.com/dovetail/trunk/vendor/rails/activerecord/test/connections
-svn://mercury.ridingtheclutch.com/dovetail
-
-
-
-2009-12-30T01:10:26.735317Z
-50
-rcameron
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
-
-jdbc_jdbchsqldb
-dir
-
-jdbc_jdbcsqlite3
-dir
-
-native_frontbase
-dir
-
-native_sqlite3
-dir
-
-native_sybase
-dir
-
-native_firebird
-dir
-
-native_openbase
-dir
-
-native_sqlite
-dir
-
-jdbc_jdbcpostgresql
-dir
-
-native_postgresql
-dir
-
-jdbc_jdbcderby
-dir
-
-jdbc_jdbcmysql
-dir
-
-native_mysql
-dir
-
-native_oracle
-dir
-
-native_db2
-dir
-
-jdbc_jdbch2
-dir
-

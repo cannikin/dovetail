@@ -1,7 +1,0 @@
-- remote_form_for(part, :url => ajax_path(:action => 'edit_part', :id => part.id), :success => "$('part_#{part.id}').replace(request.responseText).highlight();", :html => { :id => "edit_part_#{part.id}_form", :class => 'edit_part_form' }) do |f|
-  .textarea
-    = textile_editor(f, :part, :content, :id => "part_#{part.id}_content")
-  .save
-    = render :partial => 'save_bar', :locals => { :button_label => 'Save', :cancel_action => "$('part_#{part.id}').down('div.edit').toggle(); $('part_#{part.id}').down('div.view').toggle()" }
-  = link_to_remote 'Delete this Part', :url => ajax_path(:action => 'delete_part', :id => part.id), :success => "$('part_#{part.id}').fade()", :method => :delete, :confirm => 'Are you sure you want to delete his part of the page? There is no undo!', :html => { :class => 'admin delete' }
-  = textile_editor_initialize if request.xhr?

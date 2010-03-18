@@ -1,67 +1,0 @@
-10
-
-dir
-50
-svn://mercury.ridingtheclutch.com/dovetail/trunk/vendor/rails/railties/lib/rails_generator/generators/components
-svn://mercury.ridingtheclutch.com/dovetail
-
-
-
-2009-12-30T01:10:26.735317Z
-50
-rcameron
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
-
-helper
-dir
-
-model
-dir
-
-performance_test
-dir
-
-scaffold
-dir
-
-integration_test
-dir
-
-metal
-dir
-
-controller
-dir
-
-observer
-dir
-
-resource
-dir
-
-mailer
-dir
-
-migration
-dir
-
-session_migration
-dir
-
-plugin
-dir
-

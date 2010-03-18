@@ -1,7 +1,0 @@
-1:
-  id: 1
-  name: HTML
-  class_name: html
-  description: Plain HTML
-  code: <h1>Hello world!</h1>
-  position: 1

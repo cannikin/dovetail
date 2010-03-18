@@ -1,7 +1,0 @@
-1:
-  id: 1
-  name: Plain Jane
-  description: The default template that all sites start with.
-  stylesheets: plain
-  default: true
-  
