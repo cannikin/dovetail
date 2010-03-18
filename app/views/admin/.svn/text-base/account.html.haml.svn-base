@@ -1,0 +1,2 @@
+- content_for :main do
+  %h2 My Account

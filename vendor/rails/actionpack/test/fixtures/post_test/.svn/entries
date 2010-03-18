@@ -1,0 +1,37 @@
+10
+
+dir
+50
+svn://mercury.ridingtheclutch.com/dovetail/trunk/vendor/rails/actionpack/test/fixtures/post_test
+svn://mercury.ridingtheclutch.com/dovetail
+
+
+
+2009-12-30T01:10:26.735317Z
+50
+rcameron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
+
+layouts
+dir
+
+super_post
+dir
+
+post
+dir
+

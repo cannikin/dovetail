@@ -1,0 +1,23 @@
+<p>
+  <b>Page:</b>
+  <%=h @part.page_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @part.content %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @part.position %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @part.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

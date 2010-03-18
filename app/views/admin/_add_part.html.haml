@@ -1,0 +1,7 @@
+= link_to_function('+ Add a Page Part', "$(this).hide(); $('new_part').show()", :class => 'admin new', :id => 'add_part_link')
+#new_part{ :style => 'display:none' }
+  - @part_types.each do |part_type|
+    .part_type{ :onclick => "" }
+      %h4= link_to_remote part_type.name, :url => ajax_path(:action => 'add_part', :id => page.id), :method => :post, :with => "'part_type_id=#{part_type.id}'", :success => "$('new_part').toggle(); $('add_part_link').toggle(); $('parts').insert(request.responseText); $('parts').down().last().highlight()"
+      %p= part_type.description
+  = link_to_function 'Cancel', "$('new_part').hide(); $('add_part_link').show()"

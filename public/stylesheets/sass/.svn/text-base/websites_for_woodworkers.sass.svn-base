@@ -1,0 +1,335 @@
+// reset-fonts
+html
+  :color #000000
+  :background #ffffff
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+  :margin 0
+  :padding 0
+table
+  :border-collapse collapse
+  :border-spacing 0
+fieldset,img
+  border: 0
+address,caption,cite,code,dfn,em,strong,th,var 
+  font-style: normal
+  :font-weight normal 
+li 
+  :list-style none 
+caption,th 
+  :text-align left 
+h1,h2,h3,h4,h5,h6 
+  :font-size 100%
+  :font-weight normal 
+q:before,q:after 
+  :content ''
+abbr,acronym  
+  :border 0
+  :font-variant normal 
+sup  
+  :vertical-align text-top 
+sub  
+  :vertical-align text-bottom 
+input,textarea,select 
+  :font-family inherit
+  :font-size inherit
+  :font-weight inherit 
+input,textarea,select 
+  :*font-size 100% 
+legend 
+  :color #000 
+body  
+  :font 13px/1.231 arial,helvetica,clean,sans-serif
+  :*font-size small
+  :*font x-small 
+table  
+  :font-size inherit
+  :font 100% 
+pre,code,kbd,samp,tt 
+  :font-family monospace
+  :*font-size 108%
+  :line-height 100% 
+
+//
+// Websites for Woodworkers
+//
+p
+  :margin 1em 0
+  &:first-child
+    :margin-top 0
+strong
+  :font-weight bold
+em
+  :font-style italic
+a
+  :outline none
+  :padding 0 2px
+  
+// General input styles
+input.default, textarea.default
+  :font-style italic
+  :color #aaaaaa
+input.submit
+  :width auto !important
+
+// "Blank slate" text for a notice to the user
+.blank
+  padding: 1em
+  background-color: #ffffcc
+  border 1px solid: #ffcc99
+  -moz-border-radius: 8px
+  -webkit-border-radius: 8px
+  a
+    :color #8F4600
+    &:hover
+      :background-color #ffcc99
+    
+#save_bar
+  a.cancel
+    :color #990000
+    
+// show parts
+.part.html
+  h1
+    font-size: 146.5%
+    font-weight: bold
+  h2
+    font-size: 131%
+    font-weight: bold
+  h3
+    font-size: 116%
+    font-weight: bold
+  h4
+    font-size: 108%
+    font-weight: bold
+  h5
+    font-size: 100%
+    font-weight: bold
+  h6
+    font-size: 93%
+    font-weight: bold
+  ul, ol
+    margin: 1em 1em 1em 2em
+  ul li
+    list-style-type: square
+  ol li
+    list-style-type: decimal
+  dl
+    margin: 1em 0
+    dt
+      font-weight: bold
+    dd
+      margin: auto auto 1em
+  table
+    width: 100%
+
+
+  blockquote
+    margin: 1em 2em
+    
+.view
+  border: 1px solid transparent
+
+// Add part types
+#new_part
+  :font-size 93%
+  h4
+    :font-size 108%
+    :font-weight bold
+  p
+    :margin 0
+  .part_type
+    :cursor pointer
+    :background-color #dfffdf
+    :color #003F00
+    :padding 1em
+    :margin 0 0 1em
+    :-moz-border-radius 8px
+    :-webkit-border-radius 8px
+    a
+      color: #009900
+
+// Edit parts
+.edit_part_form
+  margin: 0 0 2em
+  overflow: hidden
+  .textarea
+    padding: 0 0.5em 0.5em
+    textarea
+      width: 99%
+      height: 18em
+      font-size: 93%
+      line-height: 1.5
+      border: 1px solid #aaaaaa
+  .save
+    margin: 0.5em 0 0
+    float: left
+  .delete
+    margin: 0.5em 0 0
+    float: right
+    display: block
+
+
+// Admin links
+#nav li.admin
+  :text-align center
+a.admin
+  :display block
+  :font-size 85%
+  :padding 3px 4px
+  :text-decoration none
+  :-moz-border-radius 4px
+  :-webkit-border-radius 4px
+
+a.new
+  float: left
+  overflow: hidden
+  background-color: #bfffbf
+  color: #009900
+  padding-right: 10px
+  &:hover
+    :background-color #009900
+    :color #ffffff
+    
+a.edit
+  background-color: #FFADAD
+  color: #990000
+  position: absolute
+  margin-left: -3em
+  &:hover
+    background-color: #990000
+    color: #ffffff
+    + .view
+      border: 1px dashed #FF7878
+    
+a.delete
+  background-color: #990000
+  color: #ffffff
+  &:hover
+    background-color: #ff0000
+
+// New page form in the left nav
+#new_page_form
+  :font-size 85%
+  input#new_page_name
+    :width 12em
+    :margin 0 0 0.2em
+
+// Admin strip along the top
+#admin
+  :background transparent url('/images/admin_bg-medium2.jpg') top center repeat-y
+  :color #ffffff
+  /:padding 1em
+  :font-size 85%
+  :overflow hidden
+  .links
+    :overflow hidden
+    :margin 0 0 1em
+    padding: 1em
+    background-color: rgba(0,0,0,.2)
+    a
+      :background-color transparent
+      :text-decoration underline
+      :color #ffffff
+  ul
+    li
+      :display inline
+      :margin 0 0.3em 0
+  ul.sections
+    :float left
+  ul.account
+    :float right
+  #sections
+    :width 100%
+    padding: 0 1em
+    .section
+      :overflow auto
+    #appearance
+      ul
+        li
+          :float left
+          :margin 0 1em 0
+          :width 175px
+          &.current img
+            :border 2px solid #ffcc99
+          a
+            :outline none
+            img
+              :border 2px solid #1F1104
+              :-moz-box-shadow #1F1104 3px 3px 5px
+              :-webkit-box-shadow #1F1104 3px 3px 5px
+              :outline none
+            &:hover 
+              :background-color transparent
+            &:hover img
+              :border 2px solid #ffffff
+          h3
+            :font-size 131%
+            :margin 0.2em 0
+            
+    
+#notice
+  :background-color #009900
+  :color #ffffff
+  :padding 0.5em
+  :margin 1em 0
+  :text-align center
+  
+#login
+  :font-size 116%
+  :min-height 400px
+  label
+    :display block
+    :float left
+    :clear left
+    :width 10em
+    :text-align right
+    :margin 0.2em 0.5em
+  input
+    :display block
+    :margin 0 0 0.5em
+    :width 14em
+  .remember
+    :margin 0 0 0 11em
+    input
+      :display inline
+      :float none
+      :margin 0
+      :width auto
+    label
+      :display inline
+      :float none
+      :margin 0
+      :font-size 85%
+  .forgot
+    font-size: 73%
+    margin: -0.3em 0 0 23.6em
+    display: block
+  #submit
+    :margin 1em 0 0 15.5em
+    input
+      :width auto
+      :font-size 85%
+  #sell
+    :margin 3em 0 0
+    :text-align center
+    :font-size 77%
+    p
+      :margin 0
+      
+#debug
+  padding: 2em 1em 2em 3em
+  a 
+    display: block
+  div
+    margin: 1em 0 1em
+  table
+    tr
+      &:hover
+        background-color: #ffffcc
+      &last-child td
+        border-bottom: none
+      td
+        padding: 0.2em
+        border-bottom: 1px solid #cccccc
+        &:first-child
+          font-weight: bold

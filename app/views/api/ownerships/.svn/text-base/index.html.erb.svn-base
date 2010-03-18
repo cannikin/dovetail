@@ -1,0 +1,22 @@
+<h1>Listing ownerships</h1>
+
+<table>
+  <tr>
+    <th>Site</th>
+    <th>User</th>
+  </tr>
+
+<% @ownerships.each do |ownership| %>
+  <tr>
+    <td><%=h ownership.site_id %></td>
+    <td><%=h ownership.user_id %></td>
+    <td><%= link_to 'Show', ownership %></td>
+    <td><%= link_to 'Edit', edit_ownership_path(ownership) %></td>
+    <td><%= link_to 'Destroy', ownership, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ownership', new_ownership_path %>

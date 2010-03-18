@@ -1,0 +1,26 @@
+1:
+  id: 1
+  template_id: 1
+  name: Light Gray
+  description: A simple layout with a light gray background.
+  stylesheet: one
+  default: true
+  position: 1
+  
+2:
+  id: 2
+  template_id: 1
+  name: Dark Brown
+  description: A simple layout with a dark brown background.
+  stylesheet: two
+  default: false
+  position: 2
+
+3:
+  id: 3
+  template_id: 1
+  name: Dark Dark Brown
+  description: A simple layout with a dark brown background and body.
+  stylesheet: three
+  default: false
+  position: 3

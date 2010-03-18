@@ -1,0 +1,77 @@
+10
+
+dir
+16
+svn://mercury.ridingtheclutch.com/dovetail/trunk/test
+svn://mercury.ridingtheclutch.com/dovetail
+
+
+
+2009-07-29T05:47:51.390206Z
+16
+rcameron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2009-05-26T02:16:03.000000Z
+e297614c72684d065aef001f86188732
+2009-05-26T02:08:43.161804Z
+4
+rcameron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1800
+
+performance
+dir
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

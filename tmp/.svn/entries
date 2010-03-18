@@ -1,0 +1,40 @@
+10
+
+dir
+16
+svn://mercury.ridingtheclutch.com/dovetail/trunk/tmp
+svn://mercury.ridingtheclutch.com/dovetail
+
+
+
+2009-05-26T02:08:43.161804Z
+4
+rcameron
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
+
+pids
+dir
+
+cache
+dir
+
+sessions
+dir
+
+sockets
+dir
+

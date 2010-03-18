@@ -1,0 +1,55 @@
+!!!
+%html
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8' }
+    %meta{ :name => 'robots', :content => 'all' }
+    %meta{ :name => 'author', :content => @current_site.owner.name }
+    %meta{ :name => 'description', :content => "#{@current_site.name}: #{@current_site.description}" }
+    %title
+      - if @page_title
+        = @page_title
+      - elsif @page && !@page.title.blank?
+        = @page.title
+      = "| #{@current_site.name}"
+    
+    = javascript_include_tag 'prototype','effects','application'
+    = stylesheet_link_tag 'websites_for_woodworkers'
+    = stylesheet_link_tag "templates/#{@current_site.variant.template.stylesheets}/#{@current_site.variant.stylesheet}.css", :id => 'template_stylesheet'
+    
+    = yield :head
+  
+  %body
+    = render :partial => 'admin/toolbar' if @admin
+      
+    #container
+      #header
+        %h1= link_to @current_site.name, root_path
+          
+      - if flash[:notice]
+        #notice= flash[:notice]
+      
+      #main
+        #nav
+          %ul
+            - @current_site.pages.each do |page|
+              = render :partial => 'main/nav_link', :locals => { :page => page }
+              -# %li{:class => (page == @page ? 'current' : '')}= link_to page.name, page.slug
+            %li{:id => 'nav_login', :class => params[:controller] == 'session' ? 'current' : ''}= link_to 'Login', login_path
+          - if @admin
+            = render :partial => 'admin/add_page'
+              
+        #content
+          = yield :main
+              
+      #footer
+        Hosted by 
+        = link_to 'Websites for Woodworkers', 'http://websitesforwoodworkers.com'
+          
+    :javascript
+      var dovetail = new Dovetail('#{ajax_path}','24em','3.2em');
+      #{"dovetail.showing_admin = true;" if session[:showing_admin]}
+      #{"dovetail.showing_section = '"+session[:showing_section]+"';" if session[:showing_admin]}
+      
+    = yield :body_javascript
+    
+    = render :partial => 'layouts/debug'

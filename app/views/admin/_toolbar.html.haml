@@ -1,0 +1,27 @@
+#admin{:style => "height:#{session[:showing_admin] ? '24em' : '3.2em'}"}
+  .links
+    %ul.sections
+      %li= link_to_function 'Appearance', "dovetail.showAdmin('appearance')"
+      %li= link_to_function 'Move Stuff', "dovetail.showAdmin('structure')"
+      %li= link_to_function 'Add &amp; Edit Stuff', "dovetail.showAdmin('content')"
+      %li= link_to_function 'Help!', "dovetail.showAdmin('help')"
+    %ul.account
+      %li= "Welcome back, #{@current_user.first_name}"
+      %li= link_to 'Account', account_path
+      %li= link_to 'Logout', logout_path
+      
+  #sections
+    #appearance.section{:style => "width:1000px; #{ 'display:none;' unless session[:showing_section] == 'appearance' }"} 
+      %ul
+        - @variants.each do |variant|
+          %li{ :class => @current_site.variant.id == variant.id ? 'current' : '' }
+            = link_to_function(image_tag("templates/thumbnail-#{variant.template.stylesheets}_#{variant.stylesheet}.png"), "dovetail.changeVariant('#{variant.id}',$(this).up())")
+            %h3= variant.name
+            %span.description= variant.description
+      
+    #structure.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'structure' }"}
+      Structure here!
+    #content.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'content' }"}
+      Content here!
+    #help.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'help' }"}
+      Help here!

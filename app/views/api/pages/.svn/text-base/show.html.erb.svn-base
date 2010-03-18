@@ -1,0 +1,28 @@
+<p>
+  <b>Site:</b>
+  <%=h @page.site_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @page.name %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%=h @page.slug %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @page.visible %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @page.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

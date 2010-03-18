@@ -1,0 +1,25 @@
+- content_for :main do
+  - form_tag({ :action => 'create' }, :method => 'post', :id => 'login') do
+
+    %fieldset
+      = label :session, :login
+      = text_field :session, :login
+      = label :session, :password
+      = password_field :session, :password
+      = link_to 'Forgot your password?', { :controller => 'session', :action => 'forgot' }, :class => 'forgot'
+      .remember
+        = check_box :session, :remember_me
+        = label :session, :remember_me
+  
+    #submit
+      = submit_tag 'Log In', :class => 'submit'
+  
+    #sell
+      %p 
+        Want your own website?
+      %p
+        Check out
+        = link_to 'Websites for Woodworkers', 'http://websitesforwoodworkers.com'
+        and get your own site online in 5 minutes!
+  :javascript
+    $('session_login').focus();

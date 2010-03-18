@@ -1,0 +1,28 @@
+@import common
+
+// global resets
+html, body
+  :background-color #dddddd
+  :color #333333
+a
+  :color #336699
+  &:hover
+    :background-color #dfefff
+    
+// main container
+#container
+  :background-color #ffffff
+
+// header
+#header
+  :border-bottom 2px solid #aaaaaa
+  h1
+    :font-size 197%
+    a
+      :color #333333
+      &:hover
+        :background-color transparent
+
+#main
+  .part + .part
+    border-color: #cccccc

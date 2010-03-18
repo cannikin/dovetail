@@ -1,0 +1,131 @@
+--- !ruby/object:Gem::Specification 
+name: test-unit
+version: !ruby/object:Gem::Version 
+  version: 1.2.3
+platform: ruby
+authors: 
+- Kouhei Sutou
+- Ryan Davis
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-03-20 00:00:00 -07:00
+default_executable: testrb
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: hoe
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 1.5.1
+    version: 
+description: Test::Unit (Classic) - Nathaniel Talbott's originial test-unit, externalized from the ruby project as a gem (for tool developers).
+email: 
+- kou@cozmixng.org
+- ryand-ruby@zenspider.com
+executables: 
+- testrb
+extensions: []
+
+extra_rdoc_files: 
+- History.txt
+- Manifest.txt
+- README.txt
+files: 
+- History.txt
+- Manifest.txt
+- README.txt
+- Rakefile
+- bin/testrb
+- lib/test/unit.rb
+- lib/test/unit/assertionfailederror.rb
+- lib/test/unit/assertions.rb
+- lib/test/unit/autorunner.rb
+- lib/test/unit/collector.rb
+- lib/test/unit/collector/dir.rb
+- lib/test/unit/collector/objectspace.rb
+- lib/test/unit/error.rb
+- lib/test/unit/failure.rb
+- lib/test/unit/testcase.rb
+- lib/test/unit/testresult.rb
+- lib/test/unit/testsuite.rb
+- lib/test/unit/ui/console/testrunner.rb
+- lib/test/unit/ui/fox/testrunner.rb
+- lib/test/unit/ui/gtk/testrunner.rb
+- lib/test/unit/ui/gtk2/testrunner.rb
+- lib/test/unit/ui/testrunnermediator.rb
+- lib/test/unit/ui/testrunnerutilities.rb
+- lib/test/unit/ui/tk/testrunner.rb
+- lib/test/unit/util/backtracefilter.rb
+- lib/test/unit/util/observable.rb
+- lib/test/unit/util/procwrapper.rb
+- lib/test/unit/version.rb
+- sample/adder.rb
+- sample/subtracter.rb
+- sample/tc_adder.rb
+- sample/tc_subtracter.rb
+- sample/ts_examples.rb
+- test/collector/test_dir.rb
+- test/collector/test_objectspace.rb
+- test/runit/test_assert.rb
+- test/runit/test_testcase.rb
+- test/runit/test_testresult.rb
+- test/runit/test_testsuite.rb
+- test/test_assertions.rb
+- test/test_error.rb
+- test/test_failure.rb
+- test/test_testcase.rb
+- test/test_testresult.rb
+- test/test_testsuite.rb
+- test/util/test_backtracefilter.rb
+- test/util/test_observable.rb
+- test/util/test_procwrapper.rb
+has_rdoc: true
+homepage: http://rubyforge.org/projects/test-unit/
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --main
+- README.txt
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: test-unit
+rubygems_version: 1.3.4
+signing_key: 
+specification_version: 2
+summary: Test::Unit (Classic) - Nathaniel Talbott's originial test-unit, externalized from the ruby project as a gem (for tool developers).
+test_files: 
+- test/collector/test_dir.rb
+- test/collector/test_objectspace.rb
+- test/runit/test_assert.rb
+- test/runit/test_testcase.rb
+- test/runit/test_testresult.rb
+- test/runit/test_testsuite.rb
+- test/test_assertions.rb
+- test/test_error.rb
+- test/test_failure.rb
+- test/test_testcase.rb
+- test/test_testresult.rb
+- test/test_testsuite.rb
+- test/util/test_backtracefilter.rb
+- test/util/test_observable.rb
+- test/util/test_procwrapper.rb

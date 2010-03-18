@@ -1,0 +1,6 @@
+1:
+  id: 1
+  name: Wood Theme
+  description: The default template that all sites start with.
+  stylesheet: wood.css
+  thumbnail: template_wood.png

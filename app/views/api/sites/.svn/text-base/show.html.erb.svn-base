@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @site.name %>
+</p>
+
+<p>
+  <b>Subdomain:</b>
+  <%=h @site.subdomain %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%=h @site.enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_api_site_path(@site) %> |
+<%= link_to 'Back', api_sites_path %>

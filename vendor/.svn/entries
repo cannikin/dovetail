@@ -1,0 +1,37 @@
+10
+
+dir
+16
+svn://mercury.ridingtheclutch.com/dovetail/trunk/vendor
+svn://mercury.ridingtheclutch.com/dovetail
+
+
+
+2009-06-11T04:08:05.999572Z
+13
+rcameron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
+
+plugins
+dir
+
+rails
+dir
+
+gems
+dir
+

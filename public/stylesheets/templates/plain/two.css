@@ -1,0 +1,43 @@
+@import url(common.css);
+html, body {
+  background-color: #4F341D;
+  color: #303018;
+}
+
+a {
+  color: #304830;
+}
+a:hover {
+  background-color: #DFFFDF;
+}
+
+#container {
+  background-color: #ffffff;
+}
+
+#header {
+  border-bottom: 2px solid #303018;
+}
+#header h1 {
+  font-size: 197%;
+}
+#header h1 a {
+  color: #303018;
+}
+#header h1 a:hover {
+  background-color: transparent;
+}
+
+#main .part.html img {
+  border-color: #303018;
+}
+#main .part.html th {
+  font-weight: bold;
+  border-color: #303018;
+}
+#main .part.html td {
+  border-color: #303018;
+}
+#main .part + .part {
+  border-color: #4F341D;
+}

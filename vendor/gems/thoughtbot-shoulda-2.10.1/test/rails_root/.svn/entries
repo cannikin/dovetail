@@ -1,0 +1,56 @@
+10
+
+dir
+16
+svn://mercury.ridingtheclutch.com/dovetail/trunk/vendor/gems/thoughtbot-shoulda-2.10.1/test/rails_root
+svn://mercury.ridingtheclutch.com/dovetail
+
+
+
+2009-06-11T04:06:51.578020Z
+12
+rcameron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d469b0d6-2c9b-4dc6-af30-7e8ecbfd5b1c
+
+
+
+
+
+
+0
+
+test
+dir
+
+app
+dir
+
+script
+dir
+
+config
+dir
+
+db
+dir
+
+vendor
+dir
+
+public
+dir
+
