@@ -1,5 +1,5 @@
 .DS_Store
 .svn
 log/*.log
-db/database.yml
+config/database.yml
 db/*.sqlite3
