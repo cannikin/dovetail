@@ -7,6 +7,7 @@
     [Type your text here]
   position: 1
   default: true
+  enabled: true
   
 2:
   id: 2

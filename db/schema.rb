@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20090830204315) do
     t.text     "code"
     t.integer  "position"
     t.boolean  "default",     :default => false
+    t.boolean  "enabled",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

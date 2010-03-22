@@ -1,16 +1,20 @@
 #admin{:style => "height:#{session[:showing_admin] ? '24em' : '3.2em'}"}
   .links
     %ul.sections
-      %li= link_to_function 'Appearance', "dovetail.showAdmin('appearance')"
-      %li= link_to_function 'Move Stuff', "dovetail.showAdmin('structure')"
-      %li= link_to_function 'Add &amp; Edit Stuff', "dovetail.showAdmin('content')"
-      %li= link_to_function 'Help!', "dovetail.showAdmin('help')"
+      %li{:class => "site"}= link_to_function 'Site', "dovetail.showAdmin('site')"
+      %li{:class => "appearance"}= link_to_function 'Appearance', "dovetail.showAdmin('appearance')"
+      %li{:class => "help"}= link_to_function 'Help!', "dovetail.showAdmin('help')"
+      -#
+        %li= link_to_function 'Move Stuff', "dovetail.showAdmin('structure')"
+        %li= link_to_function 'Add &amp; Edit Stuff', "dovetail.showAdmin('content')"
     %ul.account
       %li= "Welcome back, #{@current_user.first_name}"
       %li= link_to 'Account', account_path
       %li= link_to 'Logout', logout_path
       
   #sections
+    #site.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'site' }"}
+      Site options here
     #appearance.section{:style => "width:1000px; #{ 'display:none;' unless session[:showing_section] == 'appearance' }"} 
       %ul
         - @variants.each do |variant|
@@ -18,10 +22,10 @@
             = link_to_function(image_tag("templates/thumbnail-#{variant.template.stylesheets}_#{variant.stylesheet}.png"), "dovetail.changeVariant('#{variant.id}',$(this).up())")
             %h3= variant.name
             %span.description= variant.description
-      
-    #structure.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'structure' }"}
-      Structure here!
-    #content.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'content' }"}
-      Content here!
     #help.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'help' }"}
       Help here!
+    -#
+      #structure.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'structure' }"}
+        Structure here!
+      #content.section{:style => "#{ 'display:none;' unless session[:showing_section] == 'content' }"}
+        Content here!

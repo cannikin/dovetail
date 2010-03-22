@@ -74,6 +74,7 @@ input.submit
 // "Blank slate" text for a notice to the user
 .blank
   padding: 1em
+  margin-bottom: 1em
   background-color: #ffffcc
   border 1px solid: #ffcc99
   -moz-border-radius: 8px
@@ -236,6 +237,10 @@ a.delete
       :margin 0 0.3em 0
   ul.sections
     :float left
+    li.current
+      a
+        font-weight: bold
+        text-decoration: none
   ul.account
     :float right
   #sections

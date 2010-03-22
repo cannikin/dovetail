@@ -9,21 +9,35 @@ Dovetail.prototype = {
   open_height:'',
   closed_height:'',
   
-  initialize:function(prefix_path,open_height,closed_height) {
-    this.ajax_path_prefix = prefix_path;
-    this.open_height = open_height;
-    this.closed_height = closed_height;
+  initialize:function(options) {
+    this.ajax_path_prefix = options.prefix_path;
+    this.open_height = options.open_height;
+    this.closed_height = options.closed_height;
+    this.showing_admin = options.showing_admin;
+    this.showing_section = options.showing_section;
+    
+    if (this.showing_admin) {
+      $('admin').down('.'+this.showing_section).addClassName('current');
+    }
   },
   
   // Show the admin bar
   showAdmin:function(id) {
+    var clearAdmin = function() {
+      $('admin').down('ul.sections').childElements().each(function(item) { item.removeClassName('current') });
+    };
+    
     if (!this.animating) {
       this.animating = true;
       if (!this.showing_admin) {                // admin is closed so open it
+        $('admin').down('.'+id).addClassName('current');
         this.openAdmin(id);
       } else if (this.showing_section == id) {  // clicking the same section that's already open closes the admin
+        clearAdmin();
         this.closeAdmin(id);
       } else {                                  // The admin is already open, switch to a different section
+        clearAdmin();
+        $('admin').down('.'+id).addClassName('current');
         this.switchSection(id);
       }
       setTimeout(function() { this.animating = false }.bind(this), 1000); // wait 1 second for animations to stop before saying we're done

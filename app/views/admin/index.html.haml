@@ -2,10 +2,14 @@
 - content_for :main do
   -# Is this the first time the user has seen this page? (no parts and the created_at/updated_at times are identical)
   - if logged_in? && @page.parts.length > 0 && @page.created_at == @page.updated_at
-    %p.blank 
-      Welcome to your site! To start making it your own just click the <strong>Edit</strong> button next to the text you want to change and then click <strong>Save</strong> when you're done! Check out the 
-      =link_to_function 'Help', "dovetail.showAdmin('help')"
-      section for some tutorials!
+    .blank 
+      %p
+        Welcome to your site! To start making it your own just click the <strong>Edit</strong> button next to the text you want to change and then click <strong>Save</strong> when you're done! Check out some 
+        =link_to_function 'Tutorials', "dovetail.showAdmin('help')"
+        for an easy introduction to working with your site! (This message will go away the first time you edit this page. Until then just consider it a friendly reminder!)
+      %p{:style => 'text-align:center'}
+        To show off your site to friends and family just give them the address:
+        %strong= 'http://' + @current_site.subdomain + '.' + request.domain
   #parts
     - if @page.parts.empty?
       %p.blank

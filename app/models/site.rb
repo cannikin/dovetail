@@ -7,10 +7,11 @@ class Site < ActiveRecord::Base
   has_many :pages
   belongs_to :variant
   
-  validates_presence_of :subdomain, :name
-  validates_format_of :subdomain, :with => /^[A-Za-z0-9-]+$/, :message => 'Your subdomain can only contain letters, numbers and dashes.', :allow_blank => true
+  validates_presence_of :name, :message => '- Your site name cannot be blank'
+  validates_presence_of :subdomain
+  validates_format_of :subdomain, :with => /^[A-Za-z0-9-]+$/, :message => '- Your subdomain can only contain letters, numbers and dashes.', :allow_blank => true
   validates_uniqueness_of :subdomain, :case_sensitive => false
-  validates_exclusion_of :subdomain, :in => RESERVED, :message => "The subdomain <strong>{{value}}</strong> is reserved and unavailable."
+  validates_exclusion_of :subdomain, :in => RESERVED, :message => "- The subdomain \"{{value}}\" is reserved and unavailable."
   
   default_scope :conditions => { :enabled => true }
   # named_scope :enabled, :conditions => { :enabled => true }

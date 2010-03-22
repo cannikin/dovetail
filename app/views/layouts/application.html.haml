@@ -44,11 +44,23 @@
       #footer
         Hosted by 
         = link_to 'Websites for Woodworkers', 'http://websitesforwoodworkers.com'
-          
+    
+    - showing_admin = session[:showing_admin] || false
+    - showing_section = showing_admin ? session[:showing_section] : ''
+    
     :javascript
-      var dovetail = new Dovetail('#{ajax_path}','24em','3.2em');
+      var dovetail = new Dovetail({prefix_path:'#{ajax_path}', open_height:'24em', closed_height:'3.2em', showing_admin:#{showing_admin}, showing_section:'#{showing_section}'});
       #{"dovetail.showing_admin = true;" if session[:showing_admin]}
       #{"dovetail.showing_section = '"+session[:showing_section]+"';" if session[:showing_admin]}
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      try {
+        var pageTracker = _gat._getTracker("UA-15359233-1");
+        pageTracker._setDomainName(".websitesforwoodworkers.com");
+        pageTracker._trackPageview();
+      } catch(err) {}
       
     = yield :body_javascript
     

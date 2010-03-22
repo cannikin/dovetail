@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   belongs_to :country
   
   validates_presence_of :first_name, :last_name, :email, :login, :password
+  validates_uniqueness_of :email, :message => "has already been taken. If you already have an account you can create more sites by logging in and going to the \"Account\" section at the top of the page"
+  validates_uniqueness_of :login, :message => "has already been taken, please try again!"
+  validates_length_of :password, :minimum => 5
   
   before_create :generate_uuid
   
